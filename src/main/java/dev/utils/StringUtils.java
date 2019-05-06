@@ -12,9 +12,9 @@ public final class StringUtils {
 	 * @param rhs chaine 2
 	 * @return distance
 	 */
-	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) throws NullPointerException {
+	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) throws UtilsException {
 		if (lhs == null || rhs == null) {
-			return 0;
+			throw new UtilsException("Valeur nulle");
 		}
 		int len0 = lhs.length() + 1;
 		int len1 = rhs.length() + 1;
